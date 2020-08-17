@@ -23,3 +23,8 @@
   border: 1px solid #fff;
   z-index: 1;
 }
+
+.game-title {
+  font-size: 45px;
+  text-align: center;
+}
