@@ -71,8 +71,13 @@ class App extends Component {
   }
 
   keepInArea() {
-    
+    let head = this.state.snakeDots[this.state.snakeDots.length - 1];
+      if (head[0] >= 100 || head[1] >= 100 || head[0] < 0 || head[1] < 0 ) {
+        this.onGameOver();
+      }
   }
+
+  
 
   render() { 
     return (
