@@ -26,6 +26,10 @@ class App extends Component {
     document.onkeydown = this.onKeyDown;
   }
 
+  componentDidUpdate() {
+    this.keepInArea();
+  }
+
   onKeyDown = (e) => {
     e = e || window.event;
       switch (e.keyCode) {
@@ -77,7 +81,9 @@ class App extends Component {
       }
   }
 
-  
+  onGameOver() {
+   
+  }  
 
   render() { 
     return (
