@@ -105,7 +105,24 @@ class App extends Component {
           food: getRandomCoordinates()
         })
         this.enLargeSnake();
+        this.speedUpSnake();
       }
+  }
+
+  enLargeSnake() {
+    let newSnake = [...this.state.snakeDots];
+    newSnake.unshift([]);
+    this.setState({
+      snakeDots: newSnake
+    })
+  }
+
+  speedUpSnake() {
+    if (this.state.speed > 10) {
+      this.setState({
+        speed: this.state.speed - 10
+      })
+    }
   }
 
   onGameOver() {
